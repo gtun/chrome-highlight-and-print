@@ -1,0 +1,163 @@
+* {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  background: #e8e8ea;
+}
+
+#toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #fff;
+  border-bottom: 1px solid #d0d0d4;
+  font: 13px/1.4 system-ui, sans-serif;
+  color: #222;
+}
+
+#toolbar .source {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+#toolbar .source span {
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 60vw;
+}
+
+#toolbar .scale {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+#toolbar .scale label {
+  font-weight: 600;
+}
+
+#toolbar .scale button {
+  padding: 4px 10px;
+}
+
+#toolbar #scale-down,
+#toolbar #scale-up {
+  width: 30px;
+  padding: 4px 0;
+  font-weight: 600;
+}
+
+#toolbar #scale-range {
+  width: 140px;
+}
+
+#toolbar #scale-number {
+  width: 56px;
+  font: inherit;
+  padding: 4px;
+  border: 1px solid #b8b8bd;
+  border-radius: 6px;
+}
+
+#toolbar .actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+#toolbar .hint {
+  color: #777;
+}
+
+#toolbar button {
+  font: inherit;
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: 1px solid #b8b8bd;
+  background: #f6f6f7;
+  cursor: pointer;
+}
+
+#toolbar #print-btn {
+  background: #1a73e8;
+  border-color: #1a73e8;
+  color: #fff;
+}
+
+#toolbar button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+#paper {
+  box-sizing: border-box;
+  max-width: 8.5in;
+  margin: 24px auto;
+  padding: 0.6in;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#content {
+  outline: none;
+  overflow-wrap: break-word;
+}
+
+#content img {
+  max-width: 100%;
+}
+
+#content svg,
+#content video,
+#content canvas {
+  max-width: 100%;
+}
+
+#content table {
+  max-width: 100%;
+}
+
+#content pre {
+  white-space: pre-wrap;
+}
+
+#content img,
+#content svg,
+#content figure,
+#content tr {
+  break-inside: avoid;
+}
+
+.error {
+  font: 15px/1.5 system-ui, sans-serif;
+  color: #b00020;
+}
+
+@media print {
+  html, body {
+    background: none;
+  }
+
+  #toolbar {
+    display: none;
+  }
+
+  #paper {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+}

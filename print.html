@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Print selection</title>
+  <link rel="stylesheet" href="print.css">
+</head>
+<body>
+  <header id="toolbar">
+    <div class="source">
+      <strong id="source-title">Preparing selection…</strong>
+      <span id="source-url"></span>
+    </div>
+    <div class="scale" role="group" aria-label="Print size">
+      <label for="scale-range">Size</label>
+      <button id="scale-down" type="button" title="Smaller (Ctrl+-)" aria-label="Smaller">−</button>
+      <input id="scale-range" type="range" min="25" max="200" step="1" value="100">
+      <button id="scale-up" type="button" title="Larger (Ctrl+=)" aria-label="Larger">+</button>
+      <input id="scale-number" type="number" min="25" max="200" step="1" value="100"
+             aria-label="Size in percent"><span>%</span>
+      <button id="scale-fit" type="button" title="Shrink so nothing is cut off at the sides">Fit width</button>
+      <button id="scale-reset" type="button" title="Back to 100% (Ctrl+0)">Reset</button>
+    </div>
+    <div class="actions">
+      <span class="hint">Tip: click into the page to edit or delete anything before printing.</span>
+      <button id="print-btn" type="button" disabled>Print</button>
+      <button id="close-btn" type="button">Close</button>
+    </div>
+  </header>
+  <main id="paper"><div id="content" spellcheck="false"></div></main>
+  <script src="print.js"></script>
+</body>
+</html>

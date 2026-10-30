@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Highlight & Print",
+  "version": "1.0.0",
+  "description": "Print only the content you highlight, keeping its formatting and the images around it as they appear on the page.",
+  "permissions": ["contextMenus", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Print highlighted selection (Alt+Shift+P)",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+Shift+P" },
+      "description": "Print highlighted selection"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
