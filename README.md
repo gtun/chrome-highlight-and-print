@@ -38,3 +38,7 @@ Then click **Print** (or press **Ctrl+P**) to open the system print dialog. The 
 - Content inside cross-origin iframes (some embedded widgets) can't be read.
 - Page layout wrappers (sidebar offsets, fixed widths) are dropped on purpose, so the content flows to the paper width.
 - Images that only load with your login cookies are embedded when they come from the same site as the page. If such an image comes from a different site, it may not appear.
+
+## License
+
+Public domain, under [The Unlicense](LICENSE). Use, copy, modify or redistribute it however you like. No credit is needed.
